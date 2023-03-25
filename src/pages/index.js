@@ -13,6 +13,7 @@ export default function Home() {
 
 	function handleClearUrlInput() {
 		setUrl("");
+		setOgMetadata(null);
 	}
 
 	function handleSubmit(e) {
