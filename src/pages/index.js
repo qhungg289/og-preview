@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
 import { Toaster, toast } from "sonner";
-import { SkewLoader } from "react-spinners";
+import Spinner from "@/components/Spinner";
 
 export default function Home() {
 	const [url, setUrl] = useState("");
@@ -136,8 +136,8 @@ export default function Home() {
 
 				{isLoading && (
 					<div className="flex flex-col items-center justify-center gap-6 py-20">
-						<SkewLoader />
-						<p>Loading</p>
+						<Spinner />
+						<p>Loading...</p>
 					</div>
 				)}
 
