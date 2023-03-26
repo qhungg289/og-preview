@@ -100,7 +100,7 @@ export default function Home() {
 						/>
 					</svg>
 					<input
-						className="w-full rounded border border-gray-300 pr-28 pl-10 placeholder:text-gray-400 focus:border-gray-400 focus:ring-0"
+						className="w-full rounded border border-gray-300 pr-28 pl-10 placeholder:text-gray-400 focus:border-gray-500 focus:ring-0"
 						type="text"
 						name="url"
 						id="url"
@@ -126,8 +126,9 @@ export default function Home() {
 						</button>
 					)}
 					<button
-						className="absolute inset-y-0 right-0 flex items-center justify-center rounded bg-black p-4 text-white transition-all hover:opacity-80"
+						className="absolute inset-y-0 right-0 flex items-center justify-center rounded bg-black p-4 text-white transition-all hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-70"
 						type="submit"
+						disabled={isLoading}
 					>
 						Check
 					</button>
