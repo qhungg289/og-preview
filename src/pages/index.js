@@ -41,6 +41,12 @@ export default function Home() {
 			body: JSON.stringify({ url }),
 		})
 			.then((res) => {
+				if (res.status == 400) {
+					toast.error("Invalid URL!");
+					urlInputRef.current.focus();
+					return null;
+				}
+
 				if (res.ok) {
 					return res.json();
 				}

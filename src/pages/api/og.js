@@ -20,6 +20,10 @@ export default function handler(req, res) {
 
 				res.status(200).json({ ogTitle, ogDescription, ogImage });
 			})
-			.catch((_) => res.status(500).send());
+			.catch((_) =>
+				res
+					.status(400)
+					.json({ message: "Can't parse the HTML from the given URL" }),
+			);
 	}
 }
