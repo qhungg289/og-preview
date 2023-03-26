@@ -2,10 +2,12 @@
 import Head from "next/head";
 import { useState, useRef } from "react";
 import { Toaster, toast } from "sonner";
+import { SkewLoader } from "react-spinners";
 
 export default function Home() {
 	const [url, setUrl] = useState("");
 	const [ogMetadata, setOgMetadata] = useState(null);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const urlInputRef = useRef(null);
 
@@ -35,6 +37,8 @@ export default function Home() {
 			return;
 		}
 
+		setIsLoading(true);
+
 		fetch("/api/og", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -51,7 +55,10 @@ export default function Home() {
 					return res.json();
 				}
 			})
-			.then((data) => setOgMetadata(data));
+			.then((data) => {
+				setOgMetadata(data);
+				setIsLoading(false);
+			});
 	}
 
 	return (
@@ -122,7 +129,14 @@ export default function Home() {
 				</button>
 			</form>
 
-			{ogMetadata && (
+			{isLoading && (
+				<div className="flex flex-col items-center justify-center gap-6 py-20">
+					<SkewLoader />
+					<p>Loading</p>
+				</div>
+			)}
+
+			{ogMetadata && !isLoading && (
 				<div className="border-1 mx-auto my-6 max-w-lg rounded-md border border-gray-200 bg-white p-4 shadow-xl">
 					{ogMetadata.ogImage ? (
 						<div className="group relative">
