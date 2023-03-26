@@ -67,10 +67,7 @@ export default function Home() {
 
 			<h1 className="my-8 text-center text-4xl font-bold">OG Preview</h1>
 
-			<form
-				className="relative mx-4 flex max-w-lg sm:mx-auto"
-				onSubmit={handleSubmit}
-			>
+			<form className="relative mx-auto flex max-w-lg" onSubmit={handleSubmit}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
