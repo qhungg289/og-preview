@@ -123,7 +123,7 @@ export default function Home() {
 			</form>
 
 			{ogMetadata && (
-				<div className="mx-auto my-6 max-w-lg rounded-md bg-white p-4 shadow-md">
+				<div className="border-1 mx-auto my-6 max-w-lg rounded-md border border-gray-200 bg-white p-4 shadow-xl">
 					{ogMetadata.ogImage ? (
 						<div className="group relative">
 							<img
