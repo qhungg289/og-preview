@@ -82,7 +82,13 @@ export default function Home() {
 			<Toaster />
 
 			<div className="container min-h-screen">
-				<h1 className="my-8 text-center text-4xl font-bold">OG Preview</h1>
+				<h1
+					className={`text-center text-4xl font-bold ${
+						ogMetadata ? "my-8" : "mb-8 mt-56"
+					}`}
+				>
+					OG Preview
+				</h1>
 
 				<form
 					className="relative mx-auto flex max-w-lg"
