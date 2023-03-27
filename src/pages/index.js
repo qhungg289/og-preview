@@ -67,7 +67,10 @@ export default function Home() {
 				<title>OG Preview</title>
 				<meta name="description" content="Preview OG metadata of your URL" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta property="og:image" content="/og-preview.png" />
+				<meta
+					property="og:image"
+					content="https://ogpreview.vercel.app/og-preview.png"
+				/>
 				<meta property="og:title" content="OG Preview" />
 				<meta
 					property="og:description"
