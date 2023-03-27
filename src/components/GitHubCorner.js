@@ -13,7 +13,7 @@ export default function GitHubCorner() {
 					style={{
 						fill: "#151513",
 						color: "#fff",
-						position: "fixed",
+						position: "absolute",
 						top: 0,
 						border: 0,
 						right: 0,
