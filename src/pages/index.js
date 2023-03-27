@@ -155,7 +155,7 @@ export default function Home() {
 								</code>
 							</div>
 						) : (
-							<div className="mx-auto flex aspect-video select-none items-center justify-center rounded border border-gray-100 bg-gray-100">
+							<div className="mx-auto flex aspect-video select-none items-center justify-center rounded border-2 border-dashed border-gray-300 bg-gray-100">
 								<code className="mx-1 rounded bg-gray-200 p-1">og:image</code>{" "}
 								not found
 							</div>
@@ -176,7 +176,7 @@ export default function Home() {
 						)}
 
 						{ogMetadata.ogDescription ? (
-							<p className="group relative rounded border-2 border-transparent text-sm text-gray-500 hover:border-sky-500">
+							<p className="group relative rounded border-2 border-transparent py-1 text-sm text-gray-500 hover:border-sky-500">
 								<span>{ogMetadata.ogDescription}</span>
 								<code className="absolute top-0 right-0 hidden rounded-sm bg-sky-500 p-1 text-sm font-normal text-white group-hover:block">
 									og:description
