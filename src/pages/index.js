@@ -82,13 +82,7 @@ export default function Home() {
 			<Toaster />
 
 			<div className="container min-h-screen">
-				<h1
-					className={`text-center text-4xl font-bold ${
-						ogMetadata ? "my-8" : "mb-8 mt-56"
-					}`}
-				>
-					OG Preview
-				</h1>
+				<h1 className="my-8 text-center text-4xl font-bold">OG Preview</h1>
 
 				<form
 					className="relative mx-auto flex max-w-lg"
@@ -137,7 +131,7 @@ export default function Home() {
 				)}
 
 				{ogMetadata && !isLoading && (
-					<div className="border-1 mx-auto my-6 max-w-lg rounded border border-gray-200 bg-white p-4 shadow-xl">
+					<div className="mx-auto my-6 max-w-lg rounded border border-gray-200 bg-white p-4 shadow-xl">
 						{ogMetadata.ogImage ? (
 							<div className="group relative">
 								<img
